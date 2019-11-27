@@ -64,12 +64,12 @@ export default class DetailScreen extends Component {
         <View style={styles.container}>
           <Text style={styles.mTitle}>메뉴 소개</Text>
           <ScrollView style={styles.menuItem}>{_menu}</ScrollView>
-          <TouchableOpacity style={styles.button}>
-            <Text
-              style={styles.buttonTitle}
-              onPress={() => this.setState({
-              count: this.state.count - 1
-            })}>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => this.setState({
+            count: this.state.count - 1
+          })}>
+            <Text style={styles.buttonTitle}>
               {this.state.count}석 예약 가능
             </Text>
           </TouchableOpacity>
