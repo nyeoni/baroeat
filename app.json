@@ -23,8 +23,16 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "android": {
+      "package": "me.JongwooHan.baroeat",
+      "icon": "./assets/icon.png",
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff"
+      }
+    },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "me.JongwooHan.baroeat"
     }
   }
 }
