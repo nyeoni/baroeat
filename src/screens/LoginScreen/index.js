@@ -22,8 +22,8 @@ export default class LoginScreen extends Component {
           <Text style={styles.title}>바로잇</Text>
         </View>
         <View style={styles.formArea}>
-          <TextInput style={styles.textForm} placeholder={"ID"}/>
-          <TextInput style={styles.textForm} placeholder={"Password"}/>
+          <TextInput style={styles.textForm} placeholder={"아이디"}/>
+          <TextInput style={styles.textForm} placeholder={"비밀번호"}/>
         </View>
         <View style={styles.buttonArea}>
           <TouchableOpacity
@@ -42,44 +42,46 @@ export default class LoginScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
-    paddingLeft: wp('10%'),
-    paddingRight: wp('10%'),
-    justifyContent: 'center'
+    backgroundColor: "white",
+    paddingLeft: wp("10%"),
+    paddingRight: wp("10%"),
+    justifyContent: "center"
   },
   titleArea: {
-    width: '100%',
-    padding: wp('10%'),
-    alignItems: 'center'
+    width: "100%",
+    padding: wp("10%"),
+    alignItems: "center"
   },
   title: {
-    fontSize: wp('10%')
+    fontSize: wp("10%")
   },
   formArea: {
-    width: '100%',
-    paddingBottom: wp('10%')
+    width: "100%",
+    paddingBottom: wp("10%")
   },
   textForm: {
     borderWidth: 0.5,
-    borderColor: '#888',
-    width: '100%',
-    height: hp('5%'),
+    borderColor: "#888",
+    borderRadius: 10,
+    width: "100%",
+    height: hp("5%"),
     paddingLeft: 5,
     paddingRight: 5,
     marginBottom: 5
   },
   buttonArea: {
-    width: '100%',
-    height: hp('5%')
+    width: "100%",
+    height: hp("5%")
   },
   button: {
     backgroundColor: "#5600ff",
     width: "100%",
     height: "100%",
-    justifyContent: 'center',
-    alignItems: 'center'
+    borderRadius: 10,
+    justifyContent: "center",
+    alignItems: "center"
   },
   buttonTitle: {
-    color: 'white'
+    color: "white"
   }
-})
+});
