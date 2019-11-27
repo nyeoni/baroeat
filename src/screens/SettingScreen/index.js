@@ -45,14 +45,14 @@ export default class SettingScreen extends Component {
           onPress={this
           ._navigate
           .bind(this)}>
-          <Text>개인정보 수정</Text>
+          <Text style={styles.sTitle}>개인정보 수정</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.wrapButton}
           onPress={this
           ._checkLogout
           .bind(this)}>
-          <Text>로그아웃</Text>
+          <Text style={styles.sTitle}>로그아웃</Text>
         </TouchableOpacity>
       </View>
     );
@@ -62,14 +62,18 @@ export default class SettingScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white'
+    backgroundColor: "white"
   },
   wrapButton: {
-    width: wp('100%'),
-    height: hp('8%'),
-    paddingLeft: wp('8%'),
-    justifyContent: 'center',
+    width: wp("100%"),
+    height: hp("8%"),
+    paddingLeft: wp("8%"),
+    justifyContent: "center",
     borderBottomWidth: 0.5,
-    borderColor: '#ccc'
+    borderColor: "#ccc"
+  },
+  sTitle: {
+    fontSize: 16,
+    color: "grey"
   }
-})
+});

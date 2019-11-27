@@ -7,13 +7,15 @@ import {Ionicons} from "@expo/vector-icons";
 
 import LoginScreen from './LoginScreen';
 import HomeScreen from './HomeScreen';
+import DetailScreen from "./DetailScreen";
 import SpecialScreen from "./SpecialScreen";
 import ReservationScreen from "./ReservationScreen";
 import SettingScreen from './SettingScreen';
 import AccountScreen from './AccountScreen';
 
 const HomeStack = createStackNavigator({
-  HomeScreen
+  HomeScreen,
+  DetailScreen
 }, {
   defaultNavigationOptions: ({navigation}) => ({title: '바로잇'})
 });

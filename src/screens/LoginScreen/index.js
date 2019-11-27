@@ -53,16 +53,17 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   title: {
-    fontSize: wp("10%")
+    fontSize: wp("10%"),
+    fontWeight: "bold",
+    color: "#5600ff"
   },
   formArea: {
     width: "100%",
     paddingBottom: wp("10%")
   },
   textForm: {
-    borderWidth: 0.5,
-    borderColor: "#888",
-    borderRadius: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: "grey",
     width: "100%",
     height: hp("5%"),
     paddingLeft: 5,
@@ -82,6 +83,7 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   buttonTitle: {
-    color: "white"
+    color: "white",
+    fontSize: 16
   }
 });
