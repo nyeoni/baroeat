@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   StyleSheet
 } from "react-native";
+import RNPickerSelect from "react-native-picker-select";
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from "react-native-responsive-screen";
 import {Ionicons} from "@expo/vector-icons";
 
@@ -14,6 +15,7 @@ export default class DetailScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      picker: 0,
       count: 13,
       menu: [
         {
@@ -54,21 +56,48 @@ export default class DetailScreen extends Component {
         </TouchableOpacity>
       );
     }
+
+    let _count = [];
+    for (let m = 1; m <= this.state.count; m++) {
+      _count.push({label: `${m}`, value: `${m}`, key: m});
+    }
+
     return (
       <ScrollView>
         <View style={styles.headerContainer}>
           <Text style={styles.headerText}>마슬랜 치킨</Text>
           <Text style={styles.subText}>서울특별시 서대문구 남가좌동</Text>
         </View>
-        <Image style={styles.mainImg} source={require("./assets/masulan.jpg")}/>
+        <Image
+          style={styles.mainImg}
+          source={require("./assets/masulan.jpg")}
+        />
         <View style={styles.container}>
           <Text style={styles.mTitle}>메뉴 소개</Text>
           <ScrollView style={styles.menuItem}>{_menu}</ScrollView>
+          <Text style={styles.mTitle}>인원 선택</Text>
+          <View style={styles.picker}>
+            <RNPickerSelect
+              placeholder={{
+                label: "0",
+                value: 0,
+                key: 0
+              }}
+              onValueChange={value => {
+                this.setState({ picker: value });
+              }}
+              items={_count}
+            />
+          </View>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => this.setState({
-            count: this.state.count - 1
-          })}>
+            onPress={() =>
+              this.setState({
+                count: this.state.count - this.state.picker,
+                picker: 0
+              })
+            }
+          >
             <Text style={styles.buttonTitle}>
               {this.state.count}석 예약 가능
             </Text>
@@ -128,5 +157,13 @@ const styles = StyleSheet.create({
   buttonTitle: {
     color: "white",
     fontSize: 16
+  },
+  picker: {
+    borderColor: "#CCC",
+    borderWidth: 1,
+    borderRadius: 5,
+    paddingLeft: 10,
+    paddingVertical: 10,
+    marginBottom: 20
   }
 });
