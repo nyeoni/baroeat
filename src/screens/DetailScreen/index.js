@@ -59,7 +59,7 @@ export default class DetailScreen extends Component {
 
     let _count = [];
     for (let m = 1; m <= this.state.count; m++) {
-      _count.push({label: `${m}`, value: `${m}`, key: m});
+      _count.push({label: `${m}명`, value: `${m}`, key: m});
     }
 
     return (
@@ -79,7 +79,7 @@ export default class DetailScreen extends Component {
           <View style={styles.picker}>
             <RNPickerSelect
               placeholder={{
-                label: "0",
+                label: "0명",
                 value: 0,
                 key: 0
               }}
