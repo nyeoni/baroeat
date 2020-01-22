@@ -6,19 +6,11 @@ Baroeat
 ### 1. INFO 
 ---
 
-<p align="left">
-  <img alt="brand logo" src="markdown/assets/images/baroeat_logo.png" width="20%">
-</p>
-
-#### Restaurant O2O Reservation and Ordering Service
-
 <p align="center">
   <img alt="brand intro" src="markdown/assets/images/baroeat_brand.jpg" width="50%">
 </p>
 
-<p align="center">
-  <img alt="hands on" src="markdown/assets/images/baroeat_hands_on_logo.jpg" width="50%">
-</p>
+<h4 align="center">Restaurant O2O Reservation and Ordering Service</h4>
 
 ### 2. Download
 
